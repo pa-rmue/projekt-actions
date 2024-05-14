@@ -6,6 +6,10 @@ jobs:
     name: push-test
     runs-on: windows-latest
     steps:
+      - name: set node version
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
       - name: check out repository
         uses: actions/checkout@v1
       - name: Run tests
