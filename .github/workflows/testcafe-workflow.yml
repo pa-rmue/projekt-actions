@@ -15,4 +15,4 @@ jobs:
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
         with: 
-          args: "edge push-tests.js -q"
+          args: "edge ./push-tests.js -q"
