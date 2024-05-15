@@ -6,13 +6,13 @@ jobs:
     name: push-test
     runs-on: windows-latest
     steps:
-      - name: set node version
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
+      #- name: set node version
+      #  uses: actions/setup-node@v1
+      #  with:
+      #    node-version: 20
       - name: check out repository
         uses: actions/checkout@v1
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
         with: 
-          args: "edge push-tests.js"
+          args: "edge push-tests.js -q"
